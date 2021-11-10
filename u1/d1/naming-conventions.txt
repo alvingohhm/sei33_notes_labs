@@ -1,0 +1,9 @@
+filename : kebab-case
+variable : camelCase
+function : camelCase
+
+class: camelCase
+
+const: SNAKE_CASE (pi, speed of light)
+
+

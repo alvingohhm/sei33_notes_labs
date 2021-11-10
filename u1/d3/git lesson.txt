@@ -1,0 +1,9 @@
+git remote -v
+git checkout master
+git fetch upstream
+git merge upstream/master
+New
+
+Tan Wei Jie  1:50 PM
+git pull does both fetch and merge
+git pull upstream master
