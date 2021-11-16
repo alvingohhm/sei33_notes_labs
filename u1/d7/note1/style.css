@@ -1,0 +1,55 @@
+/*comment*/
+
+/* font */
+/* font-family
+font-size
+font-weight */
+body {
+  /* default font size */
+  font-size: 10px;
+}
+
+:root {
+  --blue: #007bff;
+  --grey: #6c757d
+}
+
+h1 {
+  /* color: blue; */
+  /* color: rgb(8, 27, 100) */
+  color: #000;
+  /* color:rgba(8, 27, 100, 0.2)  */
+}
+
+div {
+  border-color:var(--grey);
+  border-width: 10px;
+  border-style: dotted;
+}
+
+body {
+  background-image: url(image_url);
+  background-repeat: no-repeat;
+}
+
+/* class */
+
+.firstDiv {
+  background-color: chartreuse;
+}
+
+/* id */
+
+#secondDiv {
+  background-color: chartreuse;
+}
+
+/* all <a> within <li> */
+li a {
+
+}
+
+/* all <a> with <li> with the specify href */
+li a[href="blah"]
+
+

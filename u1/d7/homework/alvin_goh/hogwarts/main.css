@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Estonia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+
+body {
+  background-color: #c0b7fa;
+  text-align: center;
+} /*or any color of your choosing*/
+
+h1 {
+  font-family: "Yusei Magic", sans-serif;
+  color: #7f0909;
+}
+h2 {
+  font-family: "Estonia", cursive;
+  font-size: 40px;
+  border: 3px solid #7f0909;
+  border-radius: 10px;
+  background-color: #00390f;
+  color: #ffc500;
+  width: 200px;
+  margin: 0 auto;
+}
+
+h3:before {
+  width: 50px;
+  height: 50px;
+  content: " ";
+  position: absolute;
+  left: 498px;
+  top: 150px;
+  background-image: url("https://www.wizardingworld.com/_next/image?url=https%3A%2F%2F%2F%2Fimages.ctfassets.net%2Fusf1vwtuqyxm%2F2hc0ybmCjDUBRqNgZIMtgU%2F8f4a5cec029262ebbf51641ff2436f19%2FSlytherin_House_Pride_Collection_V2.svg&w=384&q=75");
+  background-size: contain;
+}
+
+h4 {
+  width: 400px;
+  margin: 10px auto;
+}
+.snake {
+  font-family: fantasy;
+}
+
+.secret {
+  opacity: 0.5;
+}
+
+ul {
+  list-style-type: none;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid gray;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+#hidden {
+  display: none;
+}
+
+.cabbage {
+  color: CHARTREUSE;
+}
