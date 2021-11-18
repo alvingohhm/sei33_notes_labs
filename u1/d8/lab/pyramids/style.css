@@ -1,0 +1,29 @@
+.container {
+  /* width: 50px; */
+  margin: auto;
+  display: block;
+  /* justify-content: center; */
+}
+.square {
+  height: 50px;
+  width: 50px;
+  /* background-color: blue;
+  border: 1px solid gray; */
+  /* margin-bottom: 5px; */
+}
+
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+}
