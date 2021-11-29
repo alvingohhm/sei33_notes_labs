@@ -1,10 +1,9 @@
 import React from "react";
-import Card from "./components/Card";
 
 function App() {
   return (
     <div>
-      <Card></Card>
+      <h2>GA SEI-33</h2>
     </div>
   );
 }
