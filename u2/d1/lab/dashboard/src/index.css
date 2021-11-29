@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Oxygen", sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(116, 105, 135);
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(116, 105, 135, 1) 0%,
+    rgba(62, 60, 83, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(116, 105, 135, 1) 0%,
+    rgba(62, 60, 83, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(116, 105, 135, 1) 0%,
+    rgba(62, 60, 83, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#746987",endColorstr="#3e3c53",GradientType=1);
+}
+
+.centered {
+  margin: 3rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
