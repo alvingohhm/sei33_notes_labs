@@ -1,0 +1,14 @@
+.kitchen {
+  background-color: #f6a749;
+  height: 100%;
+}
+
+.oven {
+  background-color: #ce441d;
+  width: 50%;
+}
+
+.sink {
+  background-color: #96561d;
+  width: 50%;
+}

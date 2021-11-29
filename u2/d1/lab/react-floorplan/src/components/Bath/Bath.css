@@ -1,0 +1,7 @@
+.bath {
+  background-color: #6f883c;
+}
+
+.full-bath-ht {
+  height: calc(100vh * 0.07);
+}
