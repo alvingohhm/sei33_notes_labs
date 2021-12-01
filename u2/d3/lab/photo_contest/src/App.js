@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import Card from "./components/Card";
+import Form from "./components/Form";
 import birds from "./data/BirdsData";
 function App() {
   const [birdsData, setbirdsData] = useState(birds);
 
+  const addNewBirdData = (birdData) => {
+    setbirdsData([birdData, ...birdsData]);
+  };
+
+  console.log(birdsData);
   const listBirds = birdsData.map((item, index) => {
     return (
       <Card
@@ -17,20 +23,7 @@ function App() {
   });
   return (
     <div className="container">
-      <form>
-        <div className="form-group">
-          <label htmlfor="birdUrl">Image Url</label>
-          <input type="text" className="form-control" id="birdUrl"  placeholder="Enter your image url" />
-          <label htmlfor="birdUrl">Image Url</label>
-          <input type="text" className="form-control" id="birdUrl"  placeholder="Enter your image url" />
-        </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-
+      <Form getNewBirdData={addNewBirdData} />
       {listBirds}
     </div>
   );
