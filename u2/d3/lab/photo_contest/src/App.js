@@ -9,7 +9,7 @@ function App() {
     setbirdsData([birdData, ...birdsData]);
   };
 
-  console.log(birdsData);
+  // console.log(birdsData);
   const listBirds = birdsData.map((item, index) => {
     return (
       <Card

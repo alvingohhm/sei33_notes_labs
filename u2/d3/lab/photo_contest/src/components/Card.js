@@ -2,17 +2,17 @@ import React, { useState } from "react";
 
 const Card = (props) => {
   const { imgSrc, birdName, userName, approved } = props;
-  const [approvedState, setApprovedState] = useState(props.approved);
-  console.log(birdName);
+  const [approvedState, setApprovedState] = useState(approved);
+  console.log("props.approved", approved);
   console.log("approvedState", approvedState);
-  console.log("approved", approved);
+  // console.log("approved", approved);
   const btn_onClick = () => {
-    // setApprovedState(!approvedState);
+    setApprovedState(!approvedState);
   };
   // console.log(birdName);
   // console.log("approvedState", approvedState);
 
-  const btnName = approved ? "un-approve" : "approve";
+  // let btnName = approvedState ? "un-approve" : "approve";
 
   return (
     <div className="card-row">
@@ -21,8 +21,8 @@ const Card = (props) => {
         <div className="card-body">
           <h5 className="card-title">{birdName}</h5>
           <p className="card-text">Submission by: {userName}</p>
-          <a href="#!" className="btn btn-primary">
-            {btnName}
+          <a href="#!" className="btn btn-primary" onClick={btn_onClick}>
+            {approvedState ? "un-approve" : "approve"}
           </a>
         </div>
       </div>
