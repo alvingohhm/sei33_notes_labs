@@ -1,14 +1,16 @@
 import React from "react";
 
 function Controls(props) {
-  const handleClick = (button) => {
-    console.log("Controls - handleClick - button", button);
+  const { controls, dispatchLightProps } = props;
+
+  const handleClick = (level) => {
+    dispatchLightProps({ type: "CHANGE_LEVEL", payload: { level: level } });
   };
 
-  const lightButtons = props.controls.map((d, i) => {
+  const lightButtons = controls.map((d, i) => {
     return (
-      <button key={i} onClick={() => handleClick(d)}>
-        {d}
+      <button key={i} onClick={() => handleClick(d.name)}>
+        {d.name}
       </button>
     );
   });
