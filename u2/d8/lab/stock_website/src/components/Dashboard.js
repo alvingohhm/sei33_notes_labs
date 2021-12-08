@@ -8,11 +8,11 @@ function Dashboard() {
   //   "https://financialmodelingprep.com/api/v3/stock/actives?apikey=YOUR KEY";
   const stockList = stockData.map((item) => {
     return (
-      <tr>
+      <tr key={item.symbol}>
         <td>{item.name}</td>
-        <Link key={item.symbol} to={`/stocks/${item.symbol}`}>
-          <td>{item.symbol}</td>
-        </Link>
+        <td>
+          <Link to={`/stocks/${item.symbol}`}>{item.symbol}</Link>
+        </td>
       </tr>
     );
   });
@@ -21,13 +21,13 @@ function Dashboard() {
     <>
       <h1>Dashboard Page</h1>
       <table>
-        <tbody>
+        <thead>
           <tr>
             <th>Company Name</th>
             <th>Symbol</th>
           </tr>
-          {stockList}
-        </tbody>
+        </thead>
+        <tbody>{stockList}</tbody>
       </table>
     </>
   );
