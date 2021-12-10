@@ -1,21 +1,24 @@
 import React from "react";
 
-const Search = () => {
+const Search = (props) => {
+  const { onSubmitQuery, handleSearchInput, query } = props;
   return (
-    <div style={{ width: "60%", marginTop: "40px" }}>
+    <div style={{ width: "50%", marginTop: "40px" }}>
       <form className="text-center">
         <div className="mb-3">
           <input
             type="text"
             className="form-control"
             id="search_box"
+            value={query}
+            onChange={handleSearchInput}
             placeholder="Enter a Movie Title"
           />
         </div>
         <button
           type="submit"
           className="btn btn-primary btn-lg"
-          style={{ width: "150px" }}
+          onClick={onSubmitQuery}
         >
           Search
         </button>
