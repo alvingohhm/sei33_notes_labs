@@ -1,0 +1,5 @@
+- Test Code
+- Optimise - refactor + lazy loading
+- Build App
+- Upload to server
+- Configure your server
