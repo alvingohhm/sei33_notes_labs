@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head"), {title} %>
+  <body>
+    <main>
+      <div class="container py-4">
+        <%- include("partials/header", {heading: "Welcome to gitpub"}) %>
+
+        <div class="p-5 mb-4 bg-light rounded-3">
+          <h2 class="fw-bold mb-3 text-primary">Drink Menu</h2>
+          <ul class="list-group">
+            <!-- prettier-ignore -->
+            <% drinks.map((drink, index)=> { %> 
+              <% let capitalizedDrink = drink.name.charAt(0).toUpperCase() + drink.name.slice(1) %> 
+              <%- include("partials/link", {index, itemName: capitalizedDrink, menuType: "drinks"}) %> 
+            <% }) %>
+          </ul>
+          <h2 class="fw-bold my-3 text-primary">Food Menu</h2>
+          <ul class="list-group">
+            <!-- prettier-ignore -->
+            <% food.map((foodItem, index)=> { %> 
+              <% let capitalizedFood = foodItem.name.charAt(0).toUpperCase() + foodItem.name.slice(1) %> 
+              <%- include("partials/link", {index, itemName: capitalizedFood, menuType: "food"}) %> 
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
