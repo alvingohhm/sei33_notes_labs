@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flower Show</title>
+  </head>
+  <body>
+    <%- include("partials/header") %>
+    <h1>Flowers Page</h1>
+    <p>
+      The <%=flower.name%> is <% if (flower.colour==="red"){ %>
+      <span>red in color</span>
+      <%}else{%>
+      <span>not red in color</span>
+      <%}%>
+    </p>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>
