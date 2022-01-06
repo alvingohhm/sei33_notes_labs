@@ -15,6 +15,8 @@ app.get("/drinks", (req, res) => {
   res.render("index.ejs", { drinks, food, title: "gitPub - Drinks & Food" });
 });
 
+// app.locals.drinks = drinks --> declaring local variable to use. it is persistent over the duration of server
+
 app.get("/drinks/:id", (req, res) => {
   let drink = drinks[req.params.id];
   //capitalize drink name
@@ -28,6 +30,8 @@ app.get("/drinks/:id", (req, res) => {
     item: drink,
     title: `gitPub - ${drink.capitalizedName}`,
   });
+
+  // { drinks:[...drinks] } can do this to pass in parameter
 });
 
 app.get("/food/:id", (req, res) => {
