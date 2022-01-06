@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head"), {title} %>
+  <body>
+    <main>
+      <div class="container py-4">
+        <%- include("partials/header", {heading: "At foo bar"}) %>
+
+        <div class="p-5 mb-4 bg-light rounded-3">
+          <h2 class="display-6 fw-bold mb-3">
+            <%=item.capitalizedName %>
+          </h2>
+          <img
+            src="<%=  item.image  %>"
+            alt="<%=item.name %>"
+            width="300"
+          />
+          <h3 class="text-primary mt-3">Price: $<%= item.price %></h3>
+          <a href="/drinks" class="btn btn-primary btn-lg">Back</a
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
