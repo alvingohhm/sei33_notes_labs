@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head"), {title} %>
+  <body>
+    <div class="container">
+      <h1>Add Scientists</h1>
+      <form action="/create" method="post">
+        <div class="row">
+          <input
+            type="text"
+            name="name"
+            class="u-full-width"
+            placeholder="Key in Name"
+          />
+          <input
+            type="text"
+            name="description"
+            class="u-full-width"
+            placeholder="Key in Description"
+          />
+          <button type="submit" class="button button-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

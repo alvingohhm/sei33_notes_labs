@@ -1,0 +1,10 @@
+<tr>
+  <td><%= name %></td>
+  <td><%= description %></td>
+  <td>
+    <form method="POST" action="/delete?_method=DELETE">
+      <input type="hidden" name="id" value="<%=id%>" />
+      <button type="submit">Delete</button>
+    </form>
+  </td>
+</tr>

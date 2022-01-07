@@ -1,0 +1,70 @@
+mongodb - command
+show dbs -> show database
+
+use acme -> use database if not available it create
+show collections
+
+db.dropDatabase() --> drop database u need to be using that database before you can drop it
+
+db -> to show which database u are in
+
+db.createCollection('food') --> create a collection 
+
+db.<collection name>.drop()
+db.food.drop()
+
+show collection --> show all available collection
+
+db.food.insert({name: 'name', array:['green', 'yellow', 'orange'], keyValue: {first: 10, second:20}}) --> to insert data
+
+db.food.insertMany([
+  {
+    name: 'name 2',
+    array: ['blue'],
+    keyValue: {first:30, second:40}
+  },
+  {
+    name: 'name 3',
+  }
+])
+
+db.food.find() --> list all the data
+db.food.find().pretty()
+db.food.find({name: 'name 2'}).pretty()
+
+db.food.find().sort({name: 1}).pretty() //acending sort
+db.food.find().sort({name: -1}).pretty() //decending sort
+db.food.find({name: 'name 2'}).count()
+
+db.food.find().limit(2)
+db.food.findOne()
+
+
+db.food.update(
+  {name: 'name'}, 
+  {
+    name: 'no name',
+    numbers: [1,2,3]
+  }
+)
+
+db.food.update(
+  {_id: ObjectId("61d7d46a37b6cfe0f6c5936e")}, {
+
+  }
+)
+
+db.food.update(
+  {_id: ObjectId("61d7d46a37b6cfe0f6c5936e")}, 
+  {
+    $set: {
+      something: "blag blah",
+      alphabets: ['a','b'],
+      number: 1
+    }
+  }
+)
+
+db.food.remove(
+  {_id: ObjectId("61d7d46a37b6cfe0f6c5936e")}
+)

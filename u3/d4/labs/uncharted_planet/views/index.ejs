@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head"), {title} %>
+  <body>
+    <div class="container">
+      <h1>All Scientists</h1>
+      <table class="u-full-width">
+        <tbody>
+          <!-- prettier-ignore -->
+          <% scientists.map((item, index)=> { %>
+            <%- include("partials/table_row", {id: item.id, name: item.name, description: item.description}) %>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

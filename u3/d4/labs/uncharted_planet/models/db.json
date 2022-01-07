@@ -1,0 +1,29 @@
+{
+  "scientists": [
+    {
+      "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed",
+      "name": "bob",
+      "description": "hello world scientist"
+    },
+    {
+      "name": "aruvuin",
+      "description": "covid19 scientist",
+      "id": "11850b2d-7e98-49ee-b8ca-19170f97fd66"
+    },
+    {
+      "name": "alvin",
+      "description": "IMMH research",
+      "id": "d016e740-ee30-4807-ab72-719fdacc59f7"
+    },
+    {
+      "name": "tom",
+      "description": "wda panelist",
+      "id": "29734994-af07-488d-a3e8-bfaa255ddc30"
+    },
+    {
+      "name": "terry",
+      "description": "marvel story",
+      "id": "82ee272c-7b06-4b7e-9bc8-2897557a80c7"
+    }
+  ]
+}
