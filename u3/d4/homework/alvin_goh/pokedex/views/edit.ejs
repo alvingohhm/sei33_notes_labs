@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/header"), {PageTitle} %>
+  <body>
+    <main class="container">
+      <div class="bg-warning p-5 rounded mt-3 row">
+        <div class="col">
+          <h1><%= title %></h1>
+          <p class="lead">Edit Pokemon</p>
+        </div>
+        <%- include("partials/logo") %>
+        <div class="d-md-block">
+          <a class="btn btn-lg btn-dark" href="/pokemon/" role="button"
+            >Back to Home</a
+          >
+        </div>
+      </div>
+
+      <form action="/pokemon/<%= monster.id %>?_method=PUT" method="POST">
+        <%- include("partials/input", {monster}) %>
+      </form>
+    </main>
+    <%- include("partials/footer") %>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+<div class="row my-3">
+  <div class="col-md-6">
+    <div class="card shadow">
+      <div class="card-header fs-4 text-white bg-primary">Profile</div>
+      <div class="card-body">
+        <!-- Image Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 120px">Image Url</span>
+          <input
+            type="url"
+            aria-label="image url"
+            class="form-control"
+            name="img"
+            id="pokemon-imageurl"
+            value="<%= monster.img %>"
+          />
+        </div>
+        <!-- Name Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 120px">Name</span>
+          <input
+            type="text"
+            aria-label="name"
+            class="form-control"
+            name="name"
+            id="pokemon-name"
+            value="<%= monster.name %>"
+          />
+        </div>
+        <!-- Height Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 120px">Height</span>
+          <input
+            type="text"
+            aria-label="height"
+            class="form-control"
+            name="height"
+            id="pokemon-height"
+            value="<%= monster.height %>"
+          />
+        </div>
+        <!-- Weight Input -->
+        <div class="input-group mb-1">
+          <span class="input-group-text" style="width: 120px">Weight</span>
+          <input
+            type="text"
+            aria-label="weight"
+            class="form-control"
+            name="weight"
+            id="pokemon-weight"
+            value="<%= monster.weight %>"
+          />
+        </div>
+        <strong class="d-inline-block mb-1 text-primary fs-5">Gender</strong>
+        <!-- Male Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 120px">Male</span>
+          <input
+            type="text"
+            aria-label="male"
+            class="form-control"
+            name="male"
+            id="pokemon-male"
+            placeholder="Input percentage level without percent symbol"
+            value="<%= monster.sex.male %>"
+          />
+        </div>
+        <!-- Female Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 120px">Female</span>
+          <input
+            type="text"
+            aria-label="female"
+            class="form-control"
+            id="pokemon-female"
+            name="female"
+            placeholder="Input percentage level without percent symbol"
+            value="<%= monster.sex.female %>"
+          />
+        </div>
+        <!-- Classification Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 120px"
+            >Classification</span
+          >
+          <input
+            type="text"
+            aria-label="classification"
+            class="form-control"
+            name="category"
+            id="pokemon-classification"
+            value="<%= monster.category %>"
+          />
+        </div>
+        <!-- Abilities Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 120px">Abilities</span>
+          <input
+            type="text"
+            aria-label="abilities"
+            class="form-control"
+            name="abilities"
+            id="pokemon-abilities"
+            value="<%= monster.abilities.normal %>"
+          />
+        </div>
+
+        <!-- Type Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 120px">Type</span>
+          <input
+            type="text"
+            aria-label="type"
+            class="form-control"
+            name="type"
+            id="pokemon-type"
+            placeholder="Seperate each type with comma"
+            value="<%= monster.type %>"
+          />
+        </div>
+        <div>
+          <small class="text-muted">Pokemon can have more than one type.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card shadow">
+      <div class="card-header fs-4 text-white bg-primary">Stats</div>
+      <div class="card-body">
+        <!-- Hp Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 140px">Hp Level</span>
+          <input
+            type="text"
+            aria-label="hp"
+            class="form-control"
+            name="hp"
+            id="pokemon-hp"
+            value="<%= monster.stats.hp %>"
+          />
+        </div>
+        <!-- Attack Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 140px"
+            >Attack Level</span
+          >
+          <input
+            type="text"
+            aria-label="attack"
+            class="form-control"
+            name="attack"
+            id="pokemon-attack"
+            value="<%= monster.stats.attack %>"
+          />
+        </div>
+        <!-- Defense Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 140px"
+            >Defense Level</span
+          >
+          <input
+            type="text"
+            aria-label="defense"
+            class="form-control"
+            name="defense"
+            id="pokemon-defense"
+            value="<%= monster.stats.defense %>"
+          />
+        </div>
+        <!-- Spattack Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 140px"
+            >Spattack Level</span
+          >
+          <input
+            type="text"
+            aria-label="spattack"
+            class="form-control"
+            name="spattack"
+            id="pokemon-spattack"
+            value="<%= monster.stats.spattack %>"
+          />
+        </div>
+        <!-- Spdefense Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 140px"
+            >Spdefense Level</span
+          >
+          <input
+            type="text"
+            aria-label="spdefense"
+            class="form-control"
+            name="spdefense"
+            id="pokemon-spdefense"
+            value="<%= monster.stats.spdefense %>"
+          />
+        </div>
+        <!-- Speed Input -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" style="width: 140px">Speed Level</span>
+          <input
+            type="text"
+            aria-label="speed"
+            class="form-control"
+            name="speed"
+            id="pokemon-speed"
+            value="<%= monster.stats.speed %>"
+          />
+        </div>
+      </div>
+      <div class="card-footer d-flex justify-content-end">
+        <button type="submit" class="my-2 btn btn-lg btn-primary">
+          Submit All
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
