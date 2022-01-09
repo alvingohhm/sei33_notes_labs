@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head"), {title} %>
+  <body>
+    <div class="container">
+      <h1>Add New Budget Item</h1>
+      <form action="/budget/new" method="post">
+        <div class="row">
+          <div class="six columns">
+            <input
+              type="text"
+              name="date"
+              class="u-full-width"
+              placeholder="Date"
+            />
+          </div>
+          <div class="six columns">
+            <input
+              type="text"
+              name="name"
+              class="u-full-width"
+              placeholder="Name"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="six columns">
+            <input
+              type="text"
+              name="from"
+              class="u-full-width"
+              placeholder="From"
+            />
+          </div>
+          <div class="six columns">
+            <input
+              type="number"
+              name="amount"
+              class="u-full-width"
+              placeholder="Amount"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <input
+            type="text"
+            name="tags"
+            class="u-full-width"
+            placeholder="Tags - Seperate each tag with comma"
+          />
+        </div>
+        <button type="submit" class="button button-primary">Create new item</button>
+      </form>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head"), {title} %>
+  <body>
+    <div class="container">
+      <h1><%=budgetItem.name %></h1>
+      <a class="button button-primary" href="/">Back</a>
+      <div class="row">
+        <strong>Date: </strong><span><%=budgetItem.date %></span>
+      </div>
+      <div class="row">
+        <strong>Name: </strong><span><%=budgetItem.name %></span>
+      </div>
+      <div class="row">
+        <strong>From: </strong><span><%=budgetItem.from %></span>
+      </div>
+      <div class="row">
+        <strong>Amount: </strong><span><%=budgetItem.amount %></span>
+      </div>
+      <div class="row">
+        <strong>tags: </strong><span><%=budgetItem.tags %></span>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
