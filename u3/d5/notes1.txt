@@ -1,0 +1,43 @@
+db.animals.find({legs: {$gt: 2}})
+
+db.animals.find({legs: {$gt: 4}, animal: 'chicken'}) //and statement so no result
+db.animals.find({$or: [{legs: {$gt: 4}}, {animal: 'chicken'}]}) // or statement
+
+
+$eq (=)
+$gt (>)
+$gte (>=)
+$ne (!=)
+$lt (<)
+$lte (<=)
+
+
+db.animals.update({animal: 'chicken'}, {$inc: {legs: +10}})
+
+db.animals.update({animal: 'chicken'}, {$inc: {legs: -10}}) // to decrement
+
+
+$mul // multiply
+$unset // remove key value pair
+
+$rename //rename a key
+
+db.animals.find({colour: ['black', 'brown', 'white']})
+
+db.animals.find({colour: ["black", "brown", "white"]})
+
+db.animals.find({colour: {$all: ['yellow']}})
+
+db.animals.find({size: {from: 10, to: 30}})
+
+db.animals.find({'size.from': {$gt: 5}})
+
+db.animals.update({animal: 'cat'}, {$set: {blah: 'something'}}, {upsert: true})
+
+db.animals.update( {animal: 'chicken'}, {$set: {legs: 4 }}, {upsert: true})
+
+db.animals.find( {animal: /c/}) //regular expression
+db.animals.find( {animal: /^ch/}) //regular expression
+db.animals.find( {animal: /ly$/}) //regular expression
+
+db.animals.find({"size.from": {$eq: 10}}) //dot notation

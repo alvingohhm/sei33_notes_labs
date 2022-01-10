@@ -4,4 +4,4 @@ const flowers = [
   { id: 3, name: "Orchid", colour: "pink" },
 ];
 
-module.exports = flowers
+module.exports = flowers;

@@ -68,3 +68,6 @@ db.food.update(
 db.food.remove(
   {_id: ObjectId("61d7d46a37b6cfe0f6c5936e")}
 )
+
+cls -> to clear
+exit -> to end
