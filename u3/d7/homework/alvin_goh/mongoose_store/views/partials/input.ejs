@@ -1,0 +1,73 @@
+<div class="d-flex justify-content-center my-3 text-center">
+  <div class="card mb-4 rounded-3 shadow-sm " style="width: 35rem;">
+    <div class="card-header py-2" style="background-color: #25b7f1">
+      <h4 class="my-0 fw-normal"><%= title %></h4>
+    </div>          
+    <div class="card-body">
+      <!-- Name Input -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" style="width: 120px">Name</span>
+        <input
+          type="text"
+          aria-label="name"
+          class="form-control"
+          name="name"
+          id="product-name"
+          value="<%= product.name %>"
+        />
+      </div>            
+      <!-- Image Input -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" style="width: 120px">Image Url</span>
+        <input
+          type="url"
+          aria-label="image url"
+          class="form-control"
+          name="img"
+          id="product-imageurl"
+          value="<%= product.img %>"
+        />
+      </div>
+      <!-- Description Input -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" style="width: 120px">Description</span>
+        <textarea 
+          aria-label="description"
+          class="form-control"
+          name="description"
+          id="product-description"
+        /><%= product.description %></textarea>
+      </div>
+      <!-- Price Input -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" style="width: 120px">Price</span>
+        <span class="input-group-text">$</span>
+        <input
+          type="number"
+          aria-label="price"
+          class="form-control"
+          name="price"
+          id="product-price"
+          value="<%= product.price %>"
+        />
+      </div>
+      <!-- qty Input -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" style="width: 120px">Quantity</span>
+        <input
+          type="number"
+          aria-label="qty"
+          class="form-control"
+          name="qty"
+          id="product-qty"
+          value="<%= product.qty %>"
+        />
+      </div>
+    </div>
+    <div class="card-footer d-flex justify-content-end">
+      <button type="submit" class="my-2 btn btn-lg btn-primary">
+        Submit All
+      </button>
+    </div>                                    
+  </div>
+</div>

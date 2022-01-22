@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/header"), {PageTitle} %>
+  <body>
+    <main class="container">
+      <div class="bg-light p-5 rounded mt-3 row">
+        <div class="d-md-block">
+          <a class="btn btn-lg btn-primary" href="/product/new" role="button"
+            >Add a new product</a
+          >
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 my-3 text-center">
+        <!-- prettier-ignore -->
+        <% productList.map((item, index)=> { %>
+          <% const {_id,name, img, price} = item%>
+          <%- include("partials/card", {_id, name, img, price}) %>
+        <% }) %>
+      </div>
+    </main>
+    <%- include("partials/footer") %>
+  </body>
+</html>

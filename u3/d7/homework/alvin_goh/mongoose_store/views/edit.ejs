@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/header"), {PageTitle} %>
+  <body>
+    <main class="container">
+      <div class="bg-light p-5 rounded mt-3 row">
+        <div class="d-md-block">
+          <a class="btn btn-lg btn-primary" href="/" role="button"
+            >Back to Products</a
+          >
+        </div>
+      </div>
+      <form action="/product/<%= product.id %>?_method=PUT" method="POST">
+        <%- include("partials/input", {product, title: "Edit New Product"}) %>
+      </form>
+    </main>
+    <%- include("partials/footer") %>
+  </body>
+</html>
