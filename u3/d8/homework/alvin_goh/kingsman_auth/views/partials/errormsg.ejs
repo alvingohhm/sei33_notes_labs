@@ -1,0 +1,7 @@
+<% if(typeof errors != 'undefined'){ %>
+<!-- prettier-ignore-start -->
+<% errors.forEach((error)=> { %>
+<p class="text-danger"><%= error.msg %></p>
+<% }); %>
+<!-- prettier-ignore-end -->
+<% } %>

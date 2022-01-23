@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <%- include("partials/header"), {pageTitle} %>
+  <body>
+    <!-- ====== TOP HEADER BAR ====== -->
+    <div class="header">
+      <!-- title -->
+      <div class="header-title">
+        <a href="/">
+          <img src="/img/logo.png" alt="kingsman logo" />
+          <h1>KINGSMAN TAILOR</h1>
+        </a>
+      </div>
+      <!-- navigation -->
+      <div class="header-nav">
+        <ul>
+          <% if (auth) { %>
+          <!-- room routes -->
+          <li>
+            <a href="/room">fitting room three</a>
+          </li>
+          <!-- create New Agent Route -->
+          <li>
+            <a href="/users/new">Creat New Agent</a>
+          </li>
+          <!-- logout routes -->
+          <li>
+            <a
+              class="btn btn-dark"
+              href="/sessions?_method=DELETE"
+              role="button"
+              >Log Out</a
+            >
+          </li>
+          <% } else { %>
+          <li>
+            <a class="btn btn-dark" href="/sessions/new">Log In</a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+    <!-- ===== MAIN SPLASH PAGE CONTENT ===== -->
+    <div class="main">
+      <!-- image -->
+      <img src="img/splash.jpg" alt="splash image of kingsman display window" />
+      <!-- about -->
+      <div class="main-abt">
+        <h1>the modern gentleman's armour: a suit</h1>
+        As Hemingway said, "There is nothing noble in being superior to your
+        fellow man. True nobility is being superior to your former self.""
+      </div>
+    </div>
+    <%- include("partials/footer") %>
+  </body>
+</html>

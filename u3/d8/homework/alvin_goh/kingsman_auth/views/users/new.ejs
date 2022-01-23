@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/header"), {pageTitle} %>
+  <body>
+    <!-- ====== TOP HEADER BAR ====== -->
+    <div class="header">
+      <!-- title -->
+      <div class="header-title">
+        <a href="/">
+          <img src="/img/logo.png" alt="kingsman logo" />
+          <h1>KINGSMAN TAILOR</h1>
+        </a>
+      </div>
+      <!-- navigation -->
+      <div class="header-nav">
+        <ul>
+          <% if (auth) { %>
+          <!-- room routes -->
+          <li>
+            <a href="/room">fitting room three</a>
+          </li>
+          <!-- create New Agent Route -->
+          <li>
+            <a href="/users/new">Creat New Agent</a>
+          </li>
+          <!-- logout routes -->
+          <li>
+            <a
+              class="btn btn-dark"
+              href="/sessions?_method=DELETE"
+              role="button"
+              >Log Out</a
+            >
+          </li>
+          <% } else { %>
+          <li>
+            <a class="btn btn-dark" href="/sessions/new">Log In</a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <div class="card">
+            <h5 class="card-header bg-warning">Agent Sign Up Form</h5>
+            <div class="card-body">
+              <p>Fill in User Name and Password to sign up</p>
+              <%- include("../partials/errormsg") %>
+              <form action="/users" method="POST">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    name="username"
+                    placeholder="User Name"
+                    value="<%= user.username %>"
+                  />
+                  <label for="username">User Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    value="<%= user.password %>"
+                  />
+                  <label for="password">Password</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirm_password"
+                    name="confirm_password"
+                    placeholder="Confirm Password"
+                    value="<%= user.confirm_password %>"
+                  />
+                  <label for="confirm_password">Confirm Password</label>
+                </div>
+                <button type="submit" class="btn btn-warning">
+                  Create User
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <%- include("../partials/footer") %>
+  </body>
+</html>
