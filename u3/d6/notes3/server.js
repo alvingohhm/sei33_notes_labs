@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 
 const auth = require("./middleware/auth");
 const connectDB = require("./models/db");
-const { collection } = require("../notes2/models/Flower");
+// const { collection } = require("../notes2/models/Flower");
 
 const mongoURI = "mongodb://localhost:27017/sessions";
 
@@ -29,35 +29,36 @@ app.use(
     saveUninitialized: false,
     maxAge: 24 * 60 * 60 * 1000,
     // cokkie: { secure: false, httpOnly: true, maxAge: null },
-    store: store,
+    // store: store,
   })
 );
 
-app.post("/registration", async (req, res) => {
-  // get data from body
-  // username
-  // password
-  // passwordAgain
-  // name
-  // email
-  //check if passwords match
-  //check if username is unique
-  // check if email is unique
-  // hash password
-  // store in DB
-});
+// app.post("/registration", async (req, res) => {
+// get data from body
+// username
+// password
+// passwordAgain
+// name
+// email
+//check if passwords match
+//check if username is unique
+// check if email is unique
+// hash password
+// store in DB
+// });
 
-app.post("/login", async (req, res) => {
-  // use post
-  //body (encrypted)
-  // get username/ password from body
-  // use username to get password form db
-  // bycrypt compare password and hash
-});
+// app.post("/login", async (req, res) => {
+//   use post
+//   body (encrypted)
+//   get username/ password from body
+//   use username to get password form db
+//   bycrypt compare password and hash
+// });
 
 app.post("/login", async (req, res) => {
   const { password } = req.body;
-  const hash = "$2b$12$jYG5fCLnT3ya9pqxeJodCuIE6DFmpIgj9mqISiadebV.0aXqkr8La";
+  console.log(password);
+  const hash = "$2b$12$Dg6i5GuonJ.V5m9R7dphWuMPxKv6G4Wf8iWFcAXvkEtiVB3uaeSha";
 
   const valid = await bcrypt.compare(password, hash);
 
@@ -75,6 +76,8 @@ app.get("/get-hash", async (req, res) => {
   res.send(hashPassword);
 });
 
-app.get("/", auth, (req, res) => {});
+app.get("/", auth, (req, res) => {
+  console.log(req.session);
+});
 
 app.listen(5000);
