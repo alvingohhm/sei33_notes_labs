@@ -23,22 +23,25 @@ class Movie(object):
         # Return the title from the movie data.
         return self.movie_data["title"]
 
-    def get_movie_rating(self):
+    def get_movie_rating(self, source="Hard Coded"):
         """
         get_movie_rating is a getter function that returns the rating.
         """
 
         # Loop through each rating and return it if the source is "Hard Coded".
         for ratings in self.movie_data["rating"]:
-            if ratings["Source"] == "Hard Coded":
+            if ratings["Source"] == source:
                 return ratings["Value"]
+
+        # If the code makes it here, it hasn't returned in the for loop.
+        return "- Wait - Rating for source {0} was not found!".format(source)
 
 
 def return_single_movie_object(movie_title, movie_rating):
     """
     Take in the movie title and rating, and return the movie object.
     """
-    rating_list = [{"Source:": "Hard Coded", "Value": movie_rating}]
+    rating_list = [{"Source": "Hard Coded", "Value": movie_rating}]
 
     return Movie({"title": movie_title, "rating": rating_list})
 
@@ -61,7 +64,7 @@ def print_single_movie_rating(movie_query):
     my_movie = return_single_movie_object(movie_query, 7)
 
     # Print the whole formatted string.
-    print("The rating for", my_movie.get_movie_title(), "is", my_movie.get_movie_rating())
+    print('The rating for "{0}" is {1}.'.format(my_movie.get_movie_title(), my_movie.get_movie_rating()))
 
 
 def print_all_ratings(movie_list):
@@ -87,17 +90,18 @@ def main():
 
     # Let's test: Call the `print_all_ratings()` function and pass it the `default_movie_list` as a parameter.
     print_all_ratings(default_movie_list)
+    while True:
+        if search_or_ratings == 1:
+            # If search_or_ratings is "1", call list_search_results().
+            list_search_results(default_movie_list)
 
-    if search_or_ratings == 1:
-        # If search_or_ratings is "1", call list_search_results().
-        list_search_results(default_movie_list)
-    elif search_or_ratings == 2:
-        # If search_or_ratings is "2", call print_movie_rating().
-        print_single_movie_rating("Moana")
+        elif search_or_ratings == 2:
+            # If search_or_ratings is "2", call print_movie_rating().
+            print_single_movie_rating("Moana")
 
-    else:
-        # If search_or_ratings is otherwise, give an error.
-        print("Error: Your input must be 1 or 2!")
+        else:
+            # If search_or_ratings is otherwise, give an error.
+            print("Error: Your input must be 1 or 2!")
 
 
 # This line tells Python to run main() when it first opens.
