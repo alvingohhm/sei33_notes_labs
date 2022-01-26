@@ -28,16 +28,19 @@ class Movie(object):
         get_movie_rating is a getter function that returns the rating.
         """
 
-        # Return the rating from the movie data.
-        return self.movie_data["rating"]
+        # Loop through each rating and return it if the source is "Hard Coded".
+        for ratings in self.movie_data["rating"]:
+            if ratings["Source"] == "Hard Coded":
+                return ratings["Value"]
 
 
 def return_single_movie_object(movie_title, movie_rating):
     """
     Take in the movie title and rating, and return the movie object.
     """
+    rating_list = [{"Source:": "Hard Coded", "Value": movie_rating}]
 
-    return Movie({"title": movie_title, "rating": movie_rating})
+    return Movie({"title": movie_title, "rating": rating_list})
 
 
 def list_search_results(movie_titles):
